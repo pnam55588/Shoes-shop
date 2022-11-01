@@ -1,0 +1,7 @@
+body {
+  width: 100vw;
+}
+body .main {
+  width: 1280px;
+  margin: auto;
+}
