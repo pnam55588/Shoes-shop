@@ -5,3 +5,80 @@ body{
         margin: auto;
     }
 }
+.carosel{
+    position: relative;
+    height: 500px;
+    .img{
+        position: absolute;
+        width: 821px;
+        height: 392px;
+        left: 86px;
+        top: 5px;
+        background: url(../img/image\ 4.png);
+    }
+    .productName{
+        position: absolute;
+        width: 291px;
+        height: 51px;
+        left: 930px;
+        top: 124px;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 48px;
+        
+        color: #000000;
+    }
+    .productDes{
+        position: absolute;
+        width: 291px;
+        height: 51px;
+        left: 930px;
+        top: 175px;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 24px;
+        
+        color: #000000;
+    }
+    .buyNow{
+        position: absolute;
+        width: 150px;
+        height: 50px;
+        left: 930px;
+        top: 225px;
+        background: #F8B653;
+        text-decoration: none;
+    } 
+    p{
+        position: absolute;
+        width: 81px;
+        height: 24px;
+        left: 964px;
+        top: 238px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+    .background{
+        // overflow-x: hidden;
+        // overflow-y: hidden;
+        position: absolute;
+        width: 1280px;
+        height: 393px;
+        left: 0px;
+        top: 107px;
+        img{
+            width: 100%;
+        }
+    }
+}
+

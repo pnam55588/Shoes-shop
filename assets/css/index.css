@@ -5,3 +5,74 @@ body .main {
   width: 1280px;
   margin: auto;
 }
+
+.carosel {
+  position: relative;
+  height: 500px;
+}
+.carosel .img {
+  position: absolute;
+  width: 821px;
+  height: 392px;
+  left: 86px;
+  top: 5px;
+  background: url(../img/image\ 4.png);
+}
+.carosel .productName {
+  position: absolute;
+  width: 291px;
+  height: 51px;
+  left: 930px;
+  top: 124px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+}
+.carosel .productDes {
+  position: absolute;
+  width: 291px;
+  height: 51px;
+  left: 930px;
+  top: 175px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+.carosel .buyNow {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  left: 930px;
+  top: 225px;
+  background: #F8B653;
+  text-decoration: none;
+}
+.carosel p {
+  position: absolute;
+  width: 81px;
+  height: 24px;
+  left: 964px;
+  top: 238px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.carosel .background {
+  position: absolute;
+  width: 1280px;
+  height: 393px;
+  left: 0px;
+  top: 107px;
+}
+.carosel .background img {
+  width: 100%;
+}

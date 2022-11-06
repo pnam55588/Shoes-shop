@@ -17,21 +17,18 @@ getAllShoeApi = () => {
     // querry shoe to show in list product
     for (let shoe of data) {
       html += `
-          <div class="col-12 col-md-6 col-lg-4 scard">
-              <div class="card-container">
-                <img src=${shoe.image}>
-                <p>${shoe.name}</p>
-                <p>${
-                  shoe.description.length > 20
-                    ? shoe.description.substr(0, 20) + "..."
-                    : shoe.description
-                }</p>
-                <div class="buy-card d-flex">
-                  <a href="./detail.html?id=${shoe.id}" class="w-50">Buy now</a>
-                  <p class="w-50">${shoe.price}$</p>
-                </div>
-              </div>
-          </div>
+          
+        <div class="item col-3">
+            <img src=${shoe.image} alt="">
+            <div class="name">${shoe.name}</div>
+            <div class="descript">${
+                shoe.description.length > 20
+                  ? shoe.description.substr(0, 20) + "..."
+                  : shoe.description
+              }</div>
+            <a class="buy" href="./pages/detail.html?id=${shoe.id}">Buy now</a>
+            <div class="money">${shoe.price}$</div>
+        </div>
           `;
     }
     document.querySelector("#list-card").innerHTML = html;

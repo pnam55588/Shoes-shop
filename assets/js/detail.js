@@ -3,17 +3,17 @@ renDerShoeRelate = (arrShoe) => {
     let htmlCard = "";
     for (let shoe of arrShoe) {
       htmlCard += `
-          <div class="col-lg-4 my-4">
-              <div class="card-product">
-                  <img src="${shoe.image}" alt="shoe-img" />
-                  <p class="product-name">${shoe.name}</p>
-                  <p class="desc">${shoe.description.length>20?shoe.description.substr(0,20):shoe.description}</p>
-                  <div class="button-wrapper">
-                      <button class="buy-now">Buy now</button>
-                      <span class="price">${shoe.price}$</span>
-                  </div>
-              </div>
-          </div>
+      <div class="item col-3">
+      <img src=${shoe.image} alt="">
+      <div class="name">${shoe.name}</div>
+      <div class="descript">${
+          shoe.description.length > 20
+            ? shoe.description.substr(0, 20) + "..."
+            : shoe.description
+        }</div>
+      <a class="buy" href="./detail.html?id=${shoe.id}">Buy now</a>
+      <div class="money">${shoe.price}$</div>
+  </div>
           `;
     }
     document.querySelector("#list-shoes").innerHTML=htmlCard;
@@ -31,20 +31,16 @@ renDerShoeRelate = (arrShoe) => {
   }
   
   renDerShoeDetail= (shoe) => {
+    console.log(shoe.image);
     document.querySelector("#shoe-detail").innerHTML = `
-    <div class="row align-items-center">
-    <div class="col-lg-4">
-      <div class="product-detail-left">
-        <img src="${shoe.image}" alt="shoe-img" class="w-100"/>
-      </div>
+    <div class="detail">
+    <div class="img">
+        <img src=${shoe.image} alt="">
     </div>
-    <div class="col-lg-8">
-      <div class="product-detail-right">
-        <p class="product-name">${shoe.name}</p>
-        <p class="description">
-          ${shoe.description}
-        </p>
-        <p class="available-size">Available size</p>
+    <div class="name">${shoe.name}</div>
+    <div class="descript">${shoe.description}</div>
+    <div class="available">Available size</div>
+    <div class="sizes">
         <span>${shoe.size[0]}</span>
         <span>${shoe.size[1]}</span>
         <span>${shoe.size[2]}</span>
@@ -52,17 +48,15 @@ renDerShoeRelate = (arrShoe) => {
         <span>${shoe.size[4]}</span>
         <span>${shoe.size[5]}</span>
         <span>${shoe.size[6]}</span>
-        <p class="price">${shoe.price}$</p>
-  
-        <p class="quantity">
-          <button class="increase">+</button>
-          1
-          <button class="decrease">-</button>
-        </p>
-        <button class="add-to-cart">Add to cart</button>
-      </div>
     </div>
-    </div>
+    <div class="money">${shoe.price}$</div>
+    <button class="up">+</button>
+    <div class="num">1</div>
+    <button class="down">-</button>
+    <div class="add">Add to cart</div>
+</div>
+
+    
     `;
   }
   
@@ -70,7 +64,5 @@ renDerShoeRelate = (arrShoe) => {
     let urlParams = new URLSearchParams(window.location.search);
     getAPIShoe(urlParams.get('id'));
   }
-  
-  
   searchDetailShoe();
   
